@@ -27,10 +27,6 @@ jobs:
     steps:
       - name: Checkout the branch
         uses: actions/checkout@v1
-      - name: Bundle Install
-        run: bundle install
-        env:
-          BUNDLE_GITHUB__COM: x-access-token:${{ secrets.GIT_PERSONAL_ACCESS_TOKEN }}
       - name: Podfile Setup
         run: bundle exec pod install
         env: 

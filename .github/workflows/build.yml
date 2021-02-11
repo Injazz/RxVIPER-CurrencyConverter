@@ -1,5 +1,9 @@
 name: Swift iOS application
-on: pull_request
+on: 
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
 jobs:
   test:
     name: Test
